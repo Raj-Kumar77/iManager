@@ -9,12 +9,15 @@ export const useAppContext = () => {
 
 const AppContextProvider = (props) => {
 
+    const backendUrl = import.meta.env.VITE_BACKEND_URL
+
     const [selectedPlan, setSelectedPlan] = useState({
-      plan: 'Pro',
-      price: '18'
+      subscriptionType: 'Pro',
+      subscriptionPrice: '18'
     })
 
-    const value = {selectedPlan, setSelectedPlan}
+
+    const value = {selectedPlan, setSelectedPlan, backendUrl}
   return (
     <AppContext.Provider value={value}>
         {props.children}

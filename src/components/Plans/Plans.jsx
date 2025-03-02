@@ -39,8 +39,8 @@ const plansData = [
     label: 'Best Value',
   },
   {
-    id: 'enterprise',
-    title: 'Enterprise',
+    id: 'premium',
+    title: 'Premium',
     price: "25",
     pricePeriod: '',
     description: 'Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor',
@@ -64,8 +64,8 @@ const Plans = () => {
 
   const handleClick = (title,price) => {
     setSelectedPlan({
-      plan: title,
-      price: price
+      subscriptionType: title,
+      subscriptionPrice: price
     })
     navigate('/register')
   }
